@@ -131,7 +131,7 @@ with tab1:
     st.markdown(f"""
         <p class="big-font">Most Popular City to Crash: {max_city_value.title()}</p>
         <p> The amount of crashes in the town where: {max_city_count}</p>
-        <p class="big-font">Most Popular City to Crash: {min_city_value.title()}</p>
+        <p class="big-font">Least Popular City to Crash: {min_city_value.title()}</p>
         <p> The amount of crashes in the town where: {min_city_count}</p>
         
         """,unsafe_allow_html=True)

@@ -268,7 +268,7 @@ with tab3:
     st.image("Calculator.png",width=100)
     st.write("The non-categorical, or in other words the numerical data from the data set. Keep in mind these are not ALL numerical values, but rather the once which made sense running a statistical analysis on. OBJECTID, or the ID of the Car Crash would not provide a meaningful average or max, since the numbers are not meant to be used in calculations.")
     #This section took a lot of manual effort, because deciding which variables where significant or not required meticulous data cleansing as it reminded me of the importance of understanding your data before you go in to a program.
-    columns_of_interest = ["CRASH_NUMB", "NUMB_VEHC", "NUMB_NONFATAL_INJR", "NUMB_FATAL_INJR", "SPEED_LIMIT"]
+    columns_of_interest = ["NUMB_VEHC", "NUMB_NONFATAL_INJR", "NUMB_FATAL_INJR", "SPEED_LIMIT"]
     description = df[columns_of_interest].describe() #[PY4]
     st.write(description)
 

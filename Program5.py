@@ -31,7 +31,7 @@ import plotly.express as px
 #using streamlit-extras to create a car rain and embedd a youtube video. Finally, I use one more streamlit button to link my linkedin page, for any potential recruiters to see my app.
 
 #Selected Data Path
-data = "C:/Users/jcfer/OneDrive - Bentley University/pythonProject/Program5/2017_Crashes.csv"
+data = "2017_Crashes.csv"
 df = pd.read_csv(data)
 
 #Simplify the usage of creating buttons for graphs by introducing a function: [PY3]
@@ -67,7 +67,7 @@ tab1, tab2, tab3 , tab4 , tab5, tab6 , tab7, tab8, tab9= st.tabs(["Main Page","D
 
 #Tab1 Is where we introduce the data set, and use HTMl to give visuals on the main findings on the data set.
 with tab1:
-    mass_logo = "C:/Users/jcfer/OneDrive - Bentley University/pythonProject/Program5/Seal_of_Massachusetts.svg.png"
+    mass_logo = "Seal_of_Massachusetts.svg.png"
     col1, col2 = st.columns(2)
     col1.image(mass_logo, use_column_width=True) #[ST2]
 
@@ -116,7 +116,7 @@ with tab1:
 
     #Wanted to ensure usage of Streamlit features, such as streamlit Image to follow program requirement.
     #[DA3] Several through the HTMl
-    st.image("C:/Users/jcfer/OneDrive - Bentley University/pythonProject/Program5/calendar.png",width=100)
+    st.image("calendar.png",width=100)
     st.markdown(f"""
         <p class="big-font">Most Popular Day to Crash: {date_value}</p>
         <p> After counting the number of crashes in each day, the most popular day to crash was on the 9th of December, 2017. </p>
@@ -127,7 +127,7 @@ with tab1:
         <br>
         <h1>The Most and Least Popular Cities where Crashes Occur</h1>
         """,unsafe_allow_html=True)
-    st.image("C:/Users/jcfer/OneDrive - Bentley University/pythonProject/Program5/Ma_towns.png",width=500) #[ST4]
+    st.image("Ma_towns.png",width=500) #[ST4]
     st.markdown(f"""
         <p class="big-font">Most Popular City to Crash: {max_city_value.title()}</p>
         <p> The amount of crashes in the town where: {max_city_count}</p>
@@ -141,7 +141,7 @@ with tab1:
 with tab2:
     st.header("Data Dictionary")
     st.write("This section is meant as a tool for the programmer to be able to better understand the data in the data cleansing phase, and to also be transparent with the variables provided in the data set.")
-    st.image("C:/Users/jcfer/OneDrive - Bentley University/pythonProject/Program5/Dictionary.png",width=100, caption="Dictionary")
+    st.image("Dictionary.png",width=100, caption="Dictionary")
     data_dictionary = {'Crash Number': 'CRASH_NUMB',
         'City Town Name': 'CITY_TOWN_NAME',
         'Crash Date Text': 'CRASH_DATE_TEXT',
@@ -265,7 +265,7 @@ with tab2:
 
 with tab3:
     st.header("Descriptive Statistics of Data")
-    st.image("C:/Users/jcfer/OneDrive - Bentley University/pythonProject/Program5/Calculator.png",width=100)
+    st.image("Calculator.png",width=100)
     st.write("The non-categorical, or in other words the numerical data from the data set. Keep in mind these are not ALL numerical values, but rather the once which made sense running a statistical analysis on. OBJECTID, or the ID of the Car Crash would not provide a meaningful average or max, since the numbers are not meant to be used in calculations.")
     #This section took a lot of manual effort, because deciding which variables where significant or not required meticulous data cleansing as it reminded me of the importance of understanding your data before you go in to a program.
     columns_of_interest = ["CRASH_NUMB", "NUMB_VEHC", "NUMB_NONFATAL_INJR", "NUMB_FATAL_INJR", "SPEED_LIMIT"]
@@ -487,7 +487,7 @@ with tab8:
 #To call the let_it_rain function, I got inspiration off of https://www.youtube.com/watch?v=RRXFXEzjOWo&ab_channel=CodingIsFun
 with tab9:
     st.header("About Me")
-    headshot = "C:/Users/jcfer/OneDrive - Bentley University/pythonProject/Program5/CoverPhoto.jpg"
+    headshot = "CoverPhoto.jpg"
     col1, col2 = st.columns(2)
     col1.image(headshot, use_column_width=True)
     col2.write("My name is Juan Carlos Ferreyra, and I am currently a second-year student at Bentley University pursuing a double degree in Data Analytics and Computer Information Systems, while also pursuing a minor in Sociology. My determination for problem-solving and collaborating has led me to become a tutor for both the CIS Sandbox and the Undergraduate Academic Service, where I am able to practice learned concepts by helping diligent students succeed. I'm currently working to further develop my skills in Java, SQL, Excel, R-Studio, Tableau, and Python to be able to effectively use these skills in the workforce. I am a determined student looking to work for Summer 2024 in an analytics-oriented role to gain experience in the field I am passionate about.")

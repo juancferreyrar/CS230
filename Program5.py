@@ -12,9 +12,7 @@ import plotly.express as px
 
 
 #Name: Juan Carlos Ferreyra
-#CS230: Section 4
-#Data: Motorcycle Vehicle Crashes in MA in 2017
-#URL:
+
 
 #Description:
 #This program emphasizes and prioritizes the user interface, to make sure to go with the theme of the data. Firstly, the main page
